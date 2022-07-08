@@ -3,7 +3,7 @@
 `MultiCPA` is a research project from a computatiobal biology group of Prof. Fabian 
 Theis (https://github.com/theislab) from Helmholtz Zentrum München. 
 
-## What is CPA?
+## What is MultiCPA?
 ![Screenshot](Figure.png)
 
 `MultiCPA` is a framework to learn effects of perturbations at the single-cell level for multiple modalities: `proteins` and `mRNAs`. 
@@ -24,7 +24,7 @@ The repository is centered around the `MultiCPA` module:
 * [`MultiCPA.model`](MultiCPA/model.py) contains modules of compert model.
 * [`MultiCPA.data`](MultiCPA/data.py) contains data loader, which transforms anndata structure to a class compatible with compert model.
 
-Additional files and folders:
+Additional files and folders for reproducibility are found in another repository: [multicpa-reproducibility](https://github.com/theislab/multicpa-reproducibility)
 
 * [`datasets`](datasets/) contains both versions of the data: raw and pre-processed.
 * [`preprocessing`](preprocessing/) contains notebooks to reproduce the datasets pre-processing from raw data.
@@ -35,24 +35,16 @@ Note that the codebase was build on top of `CPA` model.
 
 ## Usage
 
-To learn how to use this repository, check 
-[`./notebooks/demo.ipynb`](notebooks/demo.ipynb), and the following scripts:
-
-* Note that hyperparameters in the `demo.ipynb` are not default and will not work for new datasets. Please make
-sure to run `seml` sweeps for your new dataset to find best hyperparameters.
+To learn how to use this repository, check [example_training.ipynb](https://github.com/theislab/multicpa-reproducibility/blob/main/notebooks/example_training.ipynb).
+Note that hyperparameters in the demo are not default and will not work for new datasets. Please make
+sure to run `seml` sweeps for your new dataset to find best hyperparameters. Provided Conda environments are strongly recommended. 
 
 ## Examples and Reproducibility
-All the examples and the reproducbility notebooks for the plots in the paper could be found in the [`notebooks/`](notebooks/) folder.
-
-## Training a model
-
-There are currently one way to train a MultiCPA model:
-
-* From jupyter notebook: example in [`./notebooks/demo.ipynb`](notebooks/demo.ipynb)
+All the examples and the reproducibility notebooks for the plots in the paper could be found in the [multicpa-reproducibility](https://github.com/theislab/multicpa-reproducibility) repository.
 
 ## Documentation
 
-Currently you can access the documentation via `help` function in IPython. For example:
+Currently, you can access the documentation via `help` function in IPython. For example:
 
 ```python
 from MultiCPA.api import ComPertAPI
@@ -69,8 +61,8 @@ A separate page with the documentation is coming soon.
 
 ## Support and contribute
 
-If you have a question or noticed a problem, you can post an [`issue`](https://github.com/theislab/mulpert/).
+If you have a question or noticed a problem, you can post an [`issue`](https://github.com/theislab/multicpa/).
 
 ## License
 
-This source code is released under the MIT license, included [here](LICENSE).
+This source code is released under the BSD 3-Clause License, included [here](LICENSE).
